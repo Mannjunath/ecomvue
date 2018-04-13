@@ -1,7 +1,13 @@
 <template>
   <div class="row">
       <div class="col-md-6">
-          <h5>{{title}}</h5>
+          <h2>{{title}}</h2>
+          <ul>
+                <li class="post" v-for="category in topCategoryList" :key="category.id">
+                    <a href=""> <img v-bind:src="category.imagePath" width="180px;" height="180px;" /> </a> 
+                    <span>{{category.nameHighlighted}}</span>
+                </li>
+         </ul>
       </div>
   </div>
 </template>
