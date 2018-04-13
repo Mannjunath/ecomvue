@@ -2,6 +2,7 @@
     <section>
         <app-slider />
     </section>
+    
 </template>
 
 <script>
