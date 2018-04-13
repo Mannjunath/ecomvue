@@ -9,6 +9,7 @@
 <script>
 import Header from './Layouts/header'
 import MainNav from './Layouts/main_nav'
+import appstyle from './scss/appstyle.scss'
 
 export default {
   components:{
@@ -19,6 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+    
 
 </style>
