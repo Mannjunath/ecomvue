@@ -1,18 +1,18 @@
 <template>
-    <header>
-        <h1>{{ title }} </h1>
-    </header>
+  <div class="container">
+    <app-logo></app-logo>
+  </div>
 </template>
 
 <script>
+
+
 export default {
-  data(){
-      return {
-          title: 'Logo' 
-      }
+  components:{
+    
   }
-} 
-</script>
+}
+</script> 
 
 <style scoped>
 
