@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Header from './components/layouts/header'
-import MainNav from './components/layouts/main_nav'
+import Header from './Layouts/header'
+import MainNav from './Layouts/main_nav'
 
 export default {
   components:{
