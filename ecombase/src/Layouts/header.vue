@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <app-logo></app-logo>
+    <div class="logo">
+      <a href="http://"><img src="https://www.unilogcorp.com/wp-content/uploads/2015/09/Unilog-logo.png" alt=""></a>
+    </div>
   </div>
 </template>
 
@@ -8,9 +10,7 @@
 
 
 export default {
-  components:{
-    
-  }
+  
 }
 </script> 
 
