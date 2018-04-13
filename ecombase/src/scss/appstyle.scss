@@ -23,7 +23,11 @@ a{
     // border-bottom: 3px solid #dcdcdc;
     margin-bottom: 0px;
     
-    .navbar-default .navbar-nav>li>a{
+    .navbar-nav > li > a{
         color: white;
     }
+    .navbar-collapse{
+        padding: 0px; 
+    }
 }
+
