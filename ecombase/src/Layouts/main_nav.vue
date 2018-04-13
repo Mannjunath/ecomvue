@@ -1,5 +1,6 @@
 <template>
     <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -22,10 +23,11 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><router-link to="./">Home</router-link></li>
                 <li><router-link to="./Categories">Categories</router-link></li>
-                
             </ul>
         </div><!-- /.navbar-collapse -->
+        </div>
     </nav>
+
 </template>
 
 
