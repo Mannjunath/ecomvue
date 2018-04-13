@@ -11,6 +11,10 @@
                     </li>
                 </ul>
           </div>
+
+          <div class="col-md-12 col-sm-12">
+              <a href=""><h2>Category</h2></a>
+          </div>
       </div>
   </div>
 </template>
