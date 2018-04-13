@@ -1,10 +1,9 @@
 <template>
-  <div class="container">
+  <main>
     <app-header></app-header>
     <mainnav></mainnav>
-  
     <router-view/>
-  </div>
+  </main>
 </template>
 
 <script>
