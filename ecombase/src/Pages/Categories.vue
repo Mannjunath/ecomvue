@@ -4,8 +4,10 @@
           <h2>{{title}}</h2>
           <ul>
                 <li class="post" v-for="category in topCategoryList" :key="category.id">
-                    <a href=""> <img v-bind:src="category.imagePath" width="180px;" height="180px;" /> </a> 
-                    <span>{{category.nameHighlighted}}</span>
+                    <a href=""> 
+                        <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
+                         <span>{{category.nameHighlighted}}</span>
+                     </a> 
                 </li>
          </ul>
       </div>
