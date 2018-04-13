@@ -15,3 +15,10 @@ a{
     color: $a-color;
     font-size: $base_font_size; 
 }
+
+.navbar-default{
+    background-color: #231f20;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 3px solid #dcdcdc;
+}
