@@ -1,0 +1,104 @@
+{
+  "content": {
+    "bannerName": "Banner 1",
+    "bannerValues": [
+      {
+        "bannerImage": {
+          "description": "Banner Desc",
+          "effectiveDate": "2018-04-13T07:43:04.117Z",
+          "endDate": "2018-04-13T07:43:04.117Z",
+          "fixedHeight": 0,
+          "fixedWidth": 0,
+          "id": "string",
+          "imageFileName": "string",
+          "imageName": "https://templatestage.cimm2.com/ASSETS/IMAGES/CMS/BANNERLOGO/banner9.png",
+          "imageType": "url",
+          "localeId": 0,
+          "position": "string",
+          "status": "string"
+        },
+        "bannerUrl": "string",
+        "captionLeftPos": 0,
+        "captionText": "string",
+        "captionTopPos": 0,
+        "displaySequence": 0,
+        "id": "string",
+        "sliderEffect": "string",
+        "status": "string"
+      },
+      {
+        "bannerImage": {
+          "description": "Banner Desc",
+          "effectiveDate": "2018-04-13T07:43:04.117Z",
+          "endDate": "2018-04-13T07:43:04.117Z",
+          "fixedHeight": 0,
+          "fixedWidth": 0,
+          "id": "string",
+          "imageFileName": "string",
+          "imageName": "https://templatestage.cimm2.com/ASSETS/IMAGES/CMS/BANNERLOGO/banner5.png",
+          "imageType": "url",
+          "localeId": 0,
+          "position": "string",
+          "status": "string"
+        },
+        "bannerUrl": "string",
+        "captionLeftPos": 0,
+        "captionText": "string",
+        "captionTopPos": 0,
+        "displaySequence": 0,
+        "id": "string",
+        "sliderEffect": "string",
+        "status": "string"
+      },
+      {
+        "bannerImage": {
+          "description": "Banner Desc",
+          "effectiveDate": "2018-04-13T07:43:04.117Z",
+          "endDate": "2018-04-13T07:43:04.117Z",
+          "fixedHeight": 0,
+          "fixedWidth": 0,
+          "id": "string",
+          "imageFileName": "string",
+          "imageName": "https://templatestage.cimm2.com/ASSETS/IMAGES/CMS/BANNERLOGO/banner3.png",
+          "imageType": "url",
+          "localeId": 0,
+          "position": "string",
+          "status": "string"
+        },
+        "bannerUrl": "string",
+        "captionLeftPos": 0,
+        "captionText": "string",
+        "captionTopPos": 0,
+        "displaySequence": 0,
+        "id": "string",
+        "sliderEffect": "string",
+        "status": "string"
+      }
+    ],
+    "expiryDate": "2018-04-13T07:43:04.117Z",
+    "id": "string",
+    "properties": "string",
+    "siteId": "string",
+    "startDate": "2018-04-13T07:43:04.117Z",
+    "status": "string"
+  },
+  "errors": [
+    {
+      "appliedValue": "string",
+      "errorCode": "string",
+      "errorMessage": "string",
+      "exceptionMessage": "string",
+      "fieldName": "string",
+      "parameterName": "string",
+      "rejectedValue": "string"
+    }
+  ],
+  "first": false,
+  "last": false,
+  "number": 0,
+  "numberOfElements": 0,
+  "size": 0,
+  "sort": {},
+  "totalElements": 0,
+  "totalPages": 0
+}

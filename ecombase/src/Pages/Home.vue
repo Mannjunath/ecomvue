@@ -3,15 +3,10 @@
       <div class="row">
           <div class="col-md-12 col-sm-12">
               <h2>Home</h2>
-                <ul class="list-inline">
+                <ul>
                     <li class="post" v-for="photo in photos" :key="photo.id">
-                        <!-- <h3>{{ post.title }}</h3>
-                        <p>{{ post.body }}</p> 
-
-                        <p v-for="album in albums" :key="album.id">
-                            {{ album.title }}
-                        </p>-->
-                        <a href=""> <img v-bind:src="photo.url" width="200px;" /> </a> 
+                     
+                        <a href=""> <img v-bind:src="photo.bannerImage.imageName" width="200px;" /> </a> 
                         
                     </li>
                 </ul>
@@ -21,7 +16,9 @@
 </template>
 
 <script>
+
 export default {
+    
     data(){
         return{
             photos:[]
@@ -31,9 +28,10 @@ export default {
 
     },
     mounted(){
-        this.$http.get('https://jsonplaceholder.typicode.com/photos')
+        this.$http.get('/static/banner/banner.json')
         .then(function(res){
-            this.photos = res.data
+            console.log(res.body.content.bannerValues); 
+            this.photos = res.body.content.bannerValues
         })
         
     }
