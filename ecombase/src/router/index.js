@@ -1,9 +1,8 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from '@/Pages/Home'
-import Categories from '@/Pages/Categories'
-import Header from '@/Layouts/header'
-import Footer from '@/Layouts/footer'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from '@/Pages/Home';
+import Categories from '@/Pages/Categories';
+import Products from '@/Pages/Products';
 
 Vue.use(Router)
 
@@ -15,9 +14,14 @@ export default new Router({
       component: Home
     },
     {
-      path: '/Categories',
+      path: '/categories',
       name: 'Categories',
       component: Categories
+    },
+    {
+      path: '/products',
+      name: 'Products',
+      component: Products
     }
   ]
-})
+});
