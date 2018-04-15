@@ -7,25 +7,16 @@
                         <h3>{{ blk_title }}</h3>
                     </div>
                     <div class="slidercontent">
-                        <md-card>
-                            <md-card-actions>
-                            <div class="md-subhead">
-                                
-                            </div>
-                            
-                            </md-card-actions>
-                            <md-card-media>
-                            <!-- swiper -->
-                            <swiper :options="swiperOption">
-                                <swiper-slide v-for="category in topCategoryList" :key="category.id">
-                                    <a href=""><img v-bind:src="category.imagePath" width="180px;" height="180px;" /></a>
-                                </swiper-slide>
-                                <div class="swiper-pagination" slot="pagination"></div>
-                                <div class="swiper-button-prev" slot="button-prev"></div>
-                                <div class="swiper-button-next" slot="button-next"></div>
-                            </swiper>
-                            </md-card-media>
-                        </md-card>
+                        <!-- swiper -->
+                        <swiper :options="swiperOption">
+                            <swiper-slide v-for="category in topCategoryList" :key="category.id">
+                                <a href=""><img v-bind:src="category.imagePath" width="180px;" height="180px;" /></a>
+                            </swiper-slide>
+                            <div class="swiper-pagination" slot="pagination"></div>
+                            <div class="swiper-button-prev" slot="button-prev"></div>
+                            <div class="swiper-button-next" slot="button-next"></div>
+                        </swiper>
+
                     </div>
                 </div>
             </div>
