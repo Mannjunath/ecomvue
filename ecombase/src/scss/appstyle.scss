@@ -29,5 +29,24 @@ a{
     .navbar-collapse{
         padding: 0px; 
     } 
+
+    .mainsearch{
+        .navbar-form{
+            padding: 0px;
+            .input-group{
+                width: 100%;
+                .btn{
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+                .form-control, .btn{
+                    border-radius: 0px;
+                }
+                .input-group-btn{
+                    width: 1%;
+                }
+            }
+        }
+    }
 }
 
