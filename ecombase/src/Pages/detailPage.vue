@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+       
         <div class="row" v-for="items in itemList" :key="items.customerERPId" v-if="$route.params.id == items.id">
             <div class="col-md-4">
                 <img :src="items.imageName" width="100%" />
