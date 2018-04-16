@@ -2,11 +2,11 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4" v-for="footerList in footerLinks" :key="footerList">
+                <div class="col-md-4" v-for="footerList in footerLinks" :key="footerList.id">
                     <div class="footermenus">
                         <h5>{{ footerList.linkHead }}</h5>
                         <ul>
-                            <li v-for="footerSubList in footerList.sublink" :key="footerSubList">
+                            <li v-for="footerSubList in footerList.sublink" :key="footerSubList.id">
                                 {{ footerSubList.sublinkName }}
                             </li>
                         </ul>
@@ -23,27 +23,29 @@ export default {
   data() {
       return{
         footerLinks: [{
-            linkHead: 'Quick Links',
+            linkHead: 'My Account',
             "sublink":[
-                {"sublinkName": "sub Link 1","url": ''},
-                {"sublinkName": "sub Link 2","url": ''}, 
-                {"sublinkName": "sub Link 3","url": ''}
+                {"sublinkName": "Sign / Register","url": "", "id": 1},
+                {"sublinkName": "Contractors","url": "", "id": 2}, 
+                {"sublinkName": "Events","url": "", "id": 3}
             ]},
             {
-            linkHead: 'Link 2',
+            linkHead: 'Company Information',
             "sublink":[
-                    {"sublinkName": "sub Link 1","url": ''},
-                    {"sublinkName": "sub Link 2","url": ''}, 
-                    {"sublinkName": "sub Link 3","url": ''}
+                    {"sublinkName": "About us","url": "", "id": 1},
+                    {"sublinkName": "Leadership","url": "", "id": 2}, 
+                    {"sublinkName": "News/Promotions","url": "", "id": 3},
+                    {"sublinkName": "Careers","url": "", "id": 4},
+                    {"sublinkName": "Contact us","url": "", "id": 5}
                 ]
             },
             {
-            linkHead: 'Contact us',
+            linkHead: 'Resources',
             "sublink":[
-                    {"sublinkName": "sub Link 1","url": ''},
-                    {"sublinkName": "sub Link 2","url": ''}, 
-                    {"sublinkName": "sub Link 3","url": ''},
-                    {"sublinkName": "sub Link 4","url": ''}
+                    {"sublinkName": "Clearance Items","url": "", "id": 1},
+                    {"sublinkName": "Industry Links / Tools","url": "", "id": 2}, 
+                    {"sublinkName": "FAQ's","url": "", "id": 3},
+                    {"sublinkName": "Mobile App","url": "", "id": 4}
                 ]
             },
         ]
@@ -70,15 +72,17 @@ export default {
                     width: 80%;
                     content: "";
                     display: block;
-                    background: #dddddd;
-                    margin-top: 4px;
+                    background: #e7e7e7;
+                    margin-top: 6px;
                 }
             }
+
             ul{
                 padding:0;
                 margin:0;
                 li{
                     list-style-type: none; 
+                    line-height: 26px;
                 }
             }
     
