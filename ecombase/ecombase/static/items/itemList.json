@@ -12,7 +12,7 @@
         "description": "ProRestore® Odorx™ 342002903 Odor Control Additive, 1 gal Bottle, Liquid, Clear/Milky White, Lemon",
         "displayPricing": true,
         "erpCode": "",
-        "id": "2556146",
+        "id": "2556145",
         "imageName": "https://templatestage.cimm2.com/ASSETS/IMAGES/ITEMS/DETAIL_PAGE/ProRestore_342002903.jpg",
         "imageType": "URL",
         "itemDescSpell": "ProRestore® Odorx™ Odor Control Additive, Series: Fabri-Scent™, 1 gal, Bottle, Liquid, Clear/Milky White, Lemon, 5.2, Composition: 2-Propanol, Dipropylene Glycol, Fragrance, Octylphenoxypolyethoxyethanol, 0.03 VOC, 1 Specific Gravity",
@@ -101,7 +101,7 @@
           "costPrice": 15.99,
           "currency": "$",
           "customerPartNumbers": [
-            "CPN02"
+            "CPN02","CPN05"
           ],
           "customerPrice": 15.99,
           "description": "ProRestore® Odorx™ Odor Control Additive, Series: Fabri-Scent™, 1 gal, Bottle, Liquid, Clear/Milky White, Lemon, 5.2, Composition: 2-Propanol, Dipropylene Glycol, Fragrance, Octylphenoxypolyethoxyethanol, 0.03 VOC, 1 Specific Gravity",

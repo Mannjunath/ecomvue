@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="logo">
-            <a href="http://"><img src="https://www.unilogcorp.com/wp-content/uploads/2015/09/Unilog-logo.png" alt=""></a>
+            <a href="/"><img src="https://www.unilogcorp.com/wp-content/uploads/2015/09/Unilog-logo.png" alt=""></a>
           </div>
         </div>
 
