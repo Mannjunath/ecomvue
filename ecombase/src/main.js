@@ -8,12 +8,9 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueCurrencyFilter from 'vue-currency-filter'
 import VueNumeric from 'vue-numeric'
 
-
-
 Vue.use(VueResource)
 Vue.use(VueAwesomeSwiper)
-Vue.use(VueCurrencyFilter,{symbol: '$', thousandsSeparator: ',', fractionCount: 2, fractionSeparator: '.', symbolPosition: 'front', symbolSpacing: false
-})
+Vue.use(VueCurrencyFilter,{symbol: '$', thousandsSeparator: ',', fractionCount: 2, fractionSeparator: '.', symbolPosition: 'front', symbolSpacing: false})
 Vue.use(VueNumeric)
 
 import 'swiper/dist/css/swiper.css'
@@ -24,5 +21,14 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  methods:{
+    getSeoUrlText: function(value){
+      if(value!=null){
+        value = value.trim().toLowerCase().replace(/&[#0-9a-z]+;/g,'').replace(/[^a-zA-Z0-9\-\/\s]+/g,'').replace(/--/g,'-');
+      }
+      console.log(value);
+      return value;
+    }
+  }
 })

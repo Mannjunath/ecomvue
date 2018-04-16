@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <h2>{{title}}</h2>
                 <ul class="list-inline">
-                    <li class="post" v-for="category in topCategoryList" :key="category.id" v-if="category.ancestorIds==''">
+                    <li class="post" v-for="category in topCategoryList" :key="category.id">
                         <router-link :to="{ name: 'products', params: {categoryCode:category.categoryCode, categoryName: category.name }}" v-if="category.leaf">
                             <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
                             <span>{{category.nameHighlighted}}</span>
@@ -29,11 +29,18 @@ export default {
         }
     },
     methods:{
-
+        getLevelOneCategoryList : function(categoryList){
+            categoryList.forEach(element => {
+                if(element.ancestorIds==""){
+                    this.topCategoryList.push(element)
+                }
+            });
+        }
     },
     mounted(){
         this.$http.get('/static/category/categoryList.json').then(function(res){
-           this.topCategoryList = res.body.content
+           //this.topCategoryList = res.body.content
+           this.getLevelOneCategoryList( res.body.content)
         })
         
     }
