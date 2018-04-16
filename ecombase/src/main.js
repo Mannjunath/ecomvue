@@ -12,14 +12,8 @@ import VueNumeric from 'vue-numeric'
 
 Vue.use(VueResource)
 Vue.use(VueAwesomeSwiper)
-Vue.use(VueCurrencyFilter, 
-  {
-    symbol: '$',
-    thousandsSeparator: ',',
-    fractionCount: 'number (default : 3)',
-    fractionSeparator: 'string (default: ".")',
-    symbolSpacing: 'boolean (default: true)'
-  })
+Vue.use(VueCurrencyFilter,{symbol: '$', thousandsSeparator: ',', fractionCount: 2, fractionSeparator: '.', symbolPosition: 'front', symbolSpacing: false
+})
 Vue.use(VueNumeric)
 
 import 'swiper/dist/css/swiper.css'
