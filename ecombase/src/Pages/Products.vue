@@ -20,7 +20,7 @@
 export default {
     data(){
         return {
-            title: "Categories",
+            title: "Products",
             itemList: []
         }
     },

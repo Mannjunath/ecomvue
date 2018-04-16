@@ -20,33 +20,60 @@ a{
     background-color: #231f20;
     border-radius: 0px;
     border: 0px;
-    // border-bottom: 3px solid #dcdcdc;
     margin-bottom: 0px;
     
-    .navbar-nav > li > a{
-        color: white;
+    .navbar-nav > li {
+        &:last-child {
+            > a{
+                &::after{
+                    content: "";
+                }
+            }
+        }
+        > a{
+            color: white;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+    
+            &:after{
+                content: "|";
+                display: inline;
+                position: absolute;
+                right: 0px;
+            }
+            &:hover{
+                color: #fff;
+                text-decoration: underline;
+            }
+            &:focus{
+                color: #fff;
+            }
+        }
     }
+
     .navbar-collapse{
         padding: 0px; 
     } 
+    
+}
 
-    .mainsearch{
-        .navbar-form{
-            padding: 0px;
-            .input-group{
-                width: 100%;
-                .btn{
-                    text-transform: uppercase;
-                    font-weight: bold;
-                }
-                .form-control, .btn{
-                    border-radius: 0px;
-                }
-                .input-group-btn{
-                    width: 1%;
-                }
+.mainsearch{
+    .navbar-form{
+        padding: 0px;
+        .input-group{
+            width: 100%;
+            .btn{
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .form-control, .btn{
+                border-radius: 0px;
+            }
+            .input-group-btn{
+                width: 1%;
             }
         }
     }
 }
-
