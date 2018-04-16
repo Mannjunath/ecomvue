@@ -4,12 +4,12 @@
             <div class="col-md-12">
                 <h2>{{title}}</h2>
                 <ul class="list-inline">
-                    <li class="post" v-for="category in topCategoryList" :key="category.id" v-if="category.ancestorIds==''">
-                        <router-link :to="{ name: 'products', params: {categoryCode:category.categoryCode, categoryName: category.name }}" v-if="category.leaf">
+                    <li class="post" v-for="category in topCategoryList" :key="category.id" v-if="category.ancestorIds!=''">
+                        <router-link :to="{ name: 'products', params: {categoryCode:category.categoryCode, categoryName: category.nameHighlighted }}" v-if="category.leaf">
                             <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
                             <span>{{category.nameHighlighted}}</span>
                         </router-link>
-                        <router-link :to="{name:'subcategories', params: { categoryCode:category.categoryCode, categoryName: category.name}}" v-else>
+                        <router-link :to="{name:'subcategories', params: { categoryCode:category.categoryCode, categoryName:category.nameHighlighted}}" v-else>
                             <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
                             <span>{{category.nameHighlighted}}</span>
                         </router-link>
@@ -24,7 +24,7 @@
 export default {
     data(){
         return {
-            title: "Categories",
+            title: "Sub Categories",
             topCategoryList: []
         }
     },
@@ -63,3 +63,5 @@ export default {
         }
     }
 </style>
+
+

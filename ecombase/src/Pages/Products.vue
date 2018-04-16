@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <h2>{{title}}</h2>
                 <ul class="list-inline">
-                    <li class="post" v-for="items in itemList" :key="items.customerERPId">
+                    <li class="post" v-for="items in itemList" :key="items.customerERPId" >
                         <router-link :to="{ name: 'itemDetail', params: { id: items.id }}">
                         <img :src="items.imageName" height="180px;" />
                         <span>{{items.brand}} {{items.manfPartNumber}}</span>
@@ -28,10 +28,9 @@ export default {
 
     },
     mounted(){
-        this.$http.get('/static/items/itemList.json')
-        .then(function(res){
-            console.log(res.body.content); 
+        this.$http.get('/static/items/itemList.json').then(function(res){
             this.itemList = res.body.content
+            
         })
         
     }
