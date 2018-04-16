@@ -4,14 +4,10 @@
             <div class="col-md-12">
                 <h2>{{title}}</h2>
                 <ul class="list-inline">
-                    <li class="post" v-for="category in topCategoryList" :key="category.id">
-                        <router-link :to="{ name: 'products', params: { name: category.nameHighlighted }}" v-if="category.leaf">
-                            <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
-                            <span>{{category.nameHighlighted}}</span>
-                        </router-link> 
-                        <router-link to="#" v-else>
-                            <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
-                            <span>{{category.nameHighlighted}}</span>
+                    <li class="post" v-for="items in itemList" :key="items.customerERPId">
+                        <router-link :to="{ name: 'itemDetail', params: { id: items.id }}">
+                        <img :src="items.imageName" height="180px;" />
+                        <span>{{items.brand}} {{items.manfPartNumber}}</span>
                         </router-link>
                     </li>
                 </ul>
@@ -25,17 +21,17 @@ export default {
     data(){
         return {
             title: "Categories",
-            topCategoryList: []
+            itemList: []
         }
     },
     methods:{
 
     },
     mounted(){
-        this.$http.get('/static/category/categoryList.json')
+        this.$http.get('/static/items/itemList.json')
         .then(function(res){
             console.log(res.body.content); 
-            this.topCategoryList = res.body.content
+            this.itemList = res.body.content
         })
         
     }
@@ -45,7 +41,6 @@ export default {
 
 <style lang="scss" scoped>
     .categories{
-        
         ul{
             li{
                 min-width: 23%;

@@ -5,14 +5,10 @@
                 <h2>{{title}}</h2>
                 <ul class="list-inline">
                     <li class="post" v-for="category in topCategoryList" :key="category.id">
-                        <router-link :to="{ name: 'products', params: { name: category.nameHighlighted }}" v-if="category.leaf">
+                        <a href="">
                             <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
                             <span>{{category.nameHighlighted}}</span>
-                        </router-link> 
-                        <router-link to="#" v-else>
-                            <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
-                            <span>{{category.nameHighlighted}}</span>
-                        </router-link>
+                        </a> 
                     </li>
                 </ul>
             </div>

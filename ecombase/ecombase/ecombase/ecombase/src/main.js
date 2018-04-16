@@ -5,11 +5,10 @@ import App from './App';
 import router from './router';
 import VueResource from 'vue-resource';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
-import VueNumeric from 'vue-numeric'
+
 
 Vue.use(VueResource);
 Vue.use(VueAwesomeSwiper);
-Vue.use(VueNumeric)
 
 import 'swiper/dist/css/swiper.css';
 Vue.config.productionTip = false;

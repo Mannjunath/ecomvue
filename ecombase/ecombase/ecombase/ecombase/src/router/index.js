@@ -16,16 +16,16 @@ export default new Router({
     },
     {
       path: '/categories',
-      name: 'categories',
+      name: 'Categories',
       component: Categories
     },
     {
-      path: '/l/:name',
-      name: 'products',
+      path: '/products',
+      name: 'Products',
       component: Products
     },
     {
-      path: '/d/:id',
+      path: '/products/:id',
       name: 'itemDetail',
       component: itemDetail
     }
