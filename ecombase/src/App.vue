@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import VueNumeric from 'vue-numeric'
 import Header from './Layouts/header'
 import MainNav from './Layouts/main_nav'
 import Footer from './Layouts/footer'
@@ -18,6 +20,7 @@ export default {
     'app-header': Header,
     'mainnav' : MainNav,
     'app-footer': Footer,
+    'vue-numeric': VueNumeric
   },
   name: 'App'
 }

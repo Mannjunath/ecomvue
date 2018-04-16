@@ -1,18 +1,29 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue';
-import App from './App';
-import router from './router';
-import VueResource from 'vue-resource';
-import VueAwesomeSwiper from 'vue-awesome-swiper';
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import VueResource from 'vue-resource'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import VueCurrencyFilter from 'vue-currency-filter'
 import VueNumeric from 'vue-numeric'
 
-Vue.use(VueResource);
-Vue.use(VueAwesomeSwiper);
+
+
+Vue.use(VueResource)
+Vue.use(VueAwesomeSwiper)
+Vue.use(VueCurrencyFilter, 
+  {
+    symbol: '$',
+    thousandsSeparator: ',',
+    fractionCount: 'number (default : 3)',
+    fractionSeparator: 'string (default: ".")',
+    symbolSpacing: 'boolean (default: true)'
+  })
 Vue.use(VueNumeric)
 
-import 'swiper/dist/css/swiper.css';
-Vue.config.productionTip = false;
+import 'swiper/dist/css/swiper.css'
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
