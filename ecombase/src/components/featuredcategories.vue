@@ -47,10 +47,19 @@ export default {
         }
         
     },
+     methods:{
+        getLevelOneCategoryList : function(categoryList){
+            categoryList.forEach(element => {
+                if(element.ancestorIds==""){
+                    this.topCategoryList.push(element)
+                }
+            });
+        }
+    },
     mounted(){
-        this.$http.get('/static/category/categoryList.json')
-        .then(function(res){
-            this.topCategoryList = res.body.content
+        this.$http.get('/static/category/categoryList.json').then(function(res){
+            //this.topCategoryList = res.body.content
+           this.getLevelOneCategoryList( res.body.content)
         })
         
     }

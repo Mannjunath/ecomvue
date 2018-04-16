@@ -36,28 +36,24 @@ export default {
                if(element.ancestorIds!=""){
                     element.ancestorIds.forEach(elementAncestorId => {
                         if(elementAncestorId== currentCategoryCode){
-                            this.tempCategoryList.push(element);
+                            this.subCategoryList.push(element);
                             console.log(element.ancestors.length)
                             if(element.ancestors.length>0){
                                 this.title = element.ancestors[0];
                             }
-                            
-                        }
+                         }
                     });
                 }
             });
-            if(this.tempCategoryList!=null){
-                this.subCategoryList = this.tempCategoryList;
-            }
-            if(this.tempCategoryList.length==0){
+            if(this.subCategoryList.length==0){
                  this.title = ""
             }
         }
     },
     mounted(){
         this.$http.get('/static/category/categoryList.json').then(function(res){
-            this.subCategoryList = res.body.content;
-            this.getSubCategoryList(this.subCategoryList, this.$route.params.categoryCode);
+            //this.subCategoryList = res.body.content;
+            this.getSubCategoryList(res.body.content, this.$route.params.categoryCode);
         })
      }
 }

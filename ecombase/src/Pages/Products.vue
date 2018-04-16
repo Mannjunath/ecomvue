@@ -23,27 +23,22 @@ export default {
         return {
             title: "Products",
             itemList: [],
-            tempItemList: []
         }
     },
     methods:{
         getItemListByCategoryCode: function(categoryList, currentCategoryCode){
             categoryList.forEach(element => {
-                console.log(element.categoryId+" : "+currentCategoryCode);
                 if(element.categoryId==currentCategoryCode){
-                    this.tempItemList.push(element);
+                     this.itemList.push(element);
                     this.title = element.category;
                 }
             });
-            if(this.tempItemList!=null){
-                this.itemList = this.tempItemList
-            }
         }
     },
     mounted(){
         this.$http.get('/static/items/itemList.json').then(function(res){
-            this.itemList = res.body.content
-            this.getItemListByCategoryCode(this.itemList, this.$route.params.categoryCode)
+            //this.itemList = res.body.content
+            this.getItemListByCategoryCode(res.body.content, this.$route.params.categoryCode)
         })
         
     }
