@@ -16,8 +16,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="nav navbar-nav">
-                            <li><router-link to="./">Home</router-link></li>
-                            <li><router-link to="./Categories">Categories</router-link></li>
+                            <li><router-link to="/">Home</router-link></li>
+                            <li><router-link to="/categories">Categories</router-link></li>
                         </ul>
                     </div>
                     <div class="col-md-6">
