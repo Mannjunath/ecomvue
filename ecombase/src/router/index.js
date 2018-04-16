@@ -20,12 +20,12 @@ export default new Router({
       component: Categories
     },
     {
-      path: '/products/:name',
+      path: '/l/:name',
       name: 'products',
       component: Products
     },
     {
-      path: '/products/:id',
+      path: '/d/:id',
       name: 'itemDetail',
       component: itemDetail
     }
