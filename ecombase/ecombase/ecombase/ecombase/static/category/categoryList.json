@@ -14,7 +14,7 @@
         "categoryCode": "126485",
         "id": "126485",
         "imagePath": "https://templatestage.cimm2.com/ASSETS/IMAGES/CATEGORIES/LIST_DISPLAY/AdhesivesSealants.jpg",
-        "leaf": false,
+        "leaf": true,
         "name": "Adhesives & Sealants",
         "nameHighlighted": "Adhesives & Sealants"
       }, {
@@ -48,7 +48,7 @@
         "categoryCode": "126504",
         "id": "126504",
         "imagePath": "https://templatestage.cimm2.com/ASSETS/IMAGES/CATEGORIES/LIST_DISPLAY/1900000000Fasteners.jpg",
-        "leaf": false,
+        "leaf": true,
         "name": "Fasteners",
         "nameHighlighted": "Fasteners"
       }, {
@@ -65,7 +65,7 @@
         "categoryCode": "126505",
         "id": "126505",
         "imagePath": "https://templatestage.cimm2.com/ASSETS/IMAGES/CATEGORIES/LIST_DISPLAY/1300000000000Faucets.jpg",
-        "leaf": false,
+        "leaf": true,
         "name": "Faucets",
         "nameHighlighted": "Faucets"
       }, {
@@ -82,7 +82,7 @@
         "categoryCode": "126423",
         "id": "126423",
         "imagePath": "https://templatestage.cimm2.com/ASSETS/IMAGES/CATEGORIES/LIST_DISPLAY/MaterialHandlingStorageRigging.jpg",
-        "leaf": false,
+        "leaf": true,
         "name": "Material Handling, Storage & Rigging",
         "nameHighlighted": "Material Handling, Storage & Rigging"
       }, {
@@ -99,7 +99,7 @@
         "categoryCode": "126420",
         "id": "126420",
         "imagePath": "https://templatestage.cimm2.com/ASSETS/IMAGES/CATEGORIES/LIST_DISPLAY/340000000000LightingFixtures.jpg",
-        "leaf": false,
+        "leaf": true,
         "name": "Lighting Fixtures",
         "nameHighlighted": "Lighting Fixtures"
       }
