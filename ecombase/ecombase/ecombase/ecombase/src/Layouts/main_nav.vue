@@ -14,12 +14,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <ul class="nav navbar-nav">
                             <li><router-link to="./">Home</router-link></li>
                             <li><router-link to="./Categories">Categories</router-link></li>
                         </ul>
-                        <!-- <div class="mainsearch">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mainsearch">
                             <form class="navbar-form" role="search">
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="search" id="search">
@@ -28,7 +30,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div><!-- /.navbar-collapse -->
