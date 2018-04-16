@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" v-if="topCategoryList.length>0">
         <div class="row">
             <div class="col-md-12">
                 <div class="featuredcategories">
@@ -10,13 +10,17 @@
                         <!-- swiper -->
                         <swiper :options="swiperOption">
                             <swiper-slide v-for="category in topCategoryList" :key="category.id">
-                                <a href=""><img v-bind:src="category.imagePath" width="180px;" height="180px;" /></a>
+                                 <router-link :to="{ name: 'products', params: {categoryCode:category.categoryCode, categoryName: category.name }}" v-if="category.leaf">
+                                    <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
+                                 </router-link>
+                                <router-link :to="{name:'subcategories', params: { categoryCode:category.categoryCode, categoryName: category.name}}" v-else>
+                                    <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
+                                </router-link>
                             </swiper-slide>
                             <div class="swiper-pagination" slot="pagination"></div>
                             <div class="swiper-button-prev" slot="button-prev"></div>
                             <div class="swiper-button-next" slot="button-next"></div>
                         </swiper>
-
                     </div>
                 </div>
             </div>
@@ -59,7 +63,7 @@ export default {
     mounted(){
         this.$http.get('/static/category/categoryList.json').then(function(res){
             //this.topCategoryList = res.body.content
-           this.getLevelOneCategoryList( res.body.content)
+           this.getLevelOneCategoryList(res.body.content)
         })
         
     }
