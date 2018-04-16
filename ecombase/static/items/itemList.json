@@ -12,7 +12,7 @@
         "description": "ProRestore® Odorx™ 342002903 Odor Control Additive, 1 gal Bottle, Liquid, Clear/Milky White, Lemon",
         "displayPricing": true,
         "erpCode": "",
-        "id": "2556145",
+        "id": "2556146",
         "imageName": "https://templatestage.cimm2.com/ASSETS/IMAGES/ITEMS/DETAIL_PAGE/ProRestore_342002903.jpg",
         "imageType": "URL",
         "itemDescSpell": "ProRestore® Odorx™ Odor Control Additive, Series: Fabri-Scent™, 1 gal, Bottle, Liquid, Clear/Milky White, Lemon, 5.2, Composition: 2-Propanol, Dipropylene Glycol, Fragrance, Octylphenoxypolyethoxyethanol, 0.03 VOC, 1 Specific Gravity",
@@ -82,16 +82,16 @@
         ],
         "customerERPId": "ABTX_00265",
         "defaultCategory": true,
-        "description": "ProRestore® Odorx™ 342002903 Odor Control Additive, 1 gal Bottle, Liquid, Clear/Milky White, Lemon",
+        "description": "ProRestore® Odorx™ 342002904 Odor Control Additive, 1 gal Bottle, Liquid, Clear/Milky White, Baby Powder",
         "displayPricing": true,
         "erpCode": "",
-        "id": "2556146",
-        "imageName": "https://templatestage.cimm2.com/ASSETS/IMAGES/ITEMS/DETAIL_PAGE/ProRestore_342002903.jpg",
+        "id": "2556144",
+        "imageName": "https://templatestage.cimm2.com/ASSETS/IMAGES/ITEMS/DETAIL_PAGE/ProRestore_342002904.jpg",
         "imageType": "URL",
-        "itemDescSpell": "ProRestore® Odorx™ Odor Control Additive, Series: Fabri-Scent™, 1 gal, Bottle, Liquid, Clear/Milky White, Lemon, 5.2, Composition: 2-Propanol, Dipropylene Glycol, Fragrance, Octylphenoxypolyethoxyethanol, 0.03 VOC, 1 Specific Gravity",
+        "itemDescSpell": "ProRestore® Odorx™ Odor Control Additive, Series: Fabri-Scent™, 1 gal, Bottle, Liquid, Clear/Milky White, Baby Powder, 5.2, Composition: Isopropyl Alcohol, Benzyl Acetate, 21.7 g/l VOC, 1 Specific Gravity",
         "level1Category": "Chemicals",
         "manfId": "4992",
-        "manfPartNumber": "342002903",
+        "manfPartNumber": "342002904",
         "manufacturer": "Legend Brands",
         "minimumOrderQuantity": 2,
         "orderQuantityInterval": 1,
@@ -134,6 +134,79 @@
             "listPrice": 0,
             "margin": 0,
             "quantityAvailable": 10000,
+            "unitPrice": 0,
+            "uomList": [
+              {
+                "label": "",
+                "uom": "",
+                "uomQuantity": 1
+              }
+            ],
+            "warehouseCode": "",
+            "warehouseName": ""
+          }
+        ]
+      },{
+        "brand": "ProRestore®",
+        "category": "Chemicals",
+        "categoryId": "126436",
+        "categoryPathIds": [
+          "126436"
+        ],
+        "customerERPId": "ABTX_00266",
+        "defaultCategory": true,
+        "description": "ProRestore® Odorx™ 342002901 Odor Control Additive, 1 gal Bottle, Liquid, Clear/Milky White, Cherry",
+        "displayPricing": true,
+        "erpCode": "",
+        "id": "2556145",
+        "imageName": "https://templatestage.cimm2.com/ASSETS/IMAGES/ITEMS/DETAIL_PAGE/ProRestore_342002901.jpg",
+        "imageType": "URL",
+        "itemDescSpell": "ProRestore® Odorx™ Odor Control Additive, Series: Fabri-Scent™, 1 gal, Bottle, Liquid, Clear/Milky White, Cherry, 5.2, Composition: 2-Propanol, Dipropylene Glycol, Fragrance, Octylphenoxypolyethoxyethanol, 0.03 VOC, 1 Specific Gravity",
+        "level1Category": "Chemicals",
+        "manfId": "4992",
+        "manfPartNumber": "342002901",
+        "manufacturer": "Legend Brands",
+        "minimumOrderQuantity": 2,
+        "orderQuantityInterval": 1,
+        "partIdentifier": "ABTX_002656",
+        "partNumber": "ABTX_00266",
+        "pricingWarehouse": {
+          "costPrice": 0,
+          "currency": "$",
+          "customerPartNumbers": [
+            "CPN02","CPN05"
+          ],
+          "customerPrice": 0,
+          "description": "ProRestore® Odorx™ Odor Control Additive, Series: Fabri-Scent™, 1 gal, Bottle, Liquid, Clear/Milky White, Lemon, 5.2, Composition: 2-Propanol, Dipropylene Glycol, Fragrance, Octylphenoxypolyethoxyethanol, 0.03 VOC, 1 Specific Gravity",
+          "imapPrice": 0,
+          "listPrice": 55.00,
+          "margin": 0,
+          "quantityAvailable": 0,
+          "unitPrice": 0,
+          "uomList": [
+            {
+              "label": "QUANTITY",
+              "uom": "CS",
+              "uomQuantity": 0
+            }
+          ],
+          "warehouseCode": "",
+          "warehouseName": ""
+        },
+        "upc": "100098765413",
+        "warehouses": [
+          {
+            "costPrice": 0,
+            "currency": "$",
+            "customerPartNumbers": [
+              "CPN02"
+            ],
+            "customerPrice": 0,
+            "description": "",
+            "imapPrice": 0,
+            "listPrice": 0,
+            "margin": 0,
+            "quantityAvailable": 50000,
             "unitPrice": 0,
             "uomList": [
               {
