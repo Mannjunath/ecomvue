@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>{{title}}</h2>
-                <ul class="list-inline">
-                    <li class="post" v-for="category in topCategoryList" :key="category.id" v-if="category.ancestorIds!=''">
+                <ul class="list-inline" v-if="subCategoryList.length>0">
+                    <li class="post" v-for="category in subCategoryList" :key="category.id">
                         <router-link :to="{ name: 'products', params: {categoryCode:category.categoryCode, categoryName: category.name }}" v-if="category.leaf">
                             <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
                             <span>{{category.nameHighlighted}}</span>
@@ -15,6 +15,7 @@
                         </router-link>
                     </li>
                 </ul>
+                <div v-else>No Data Found</div>
             </div>
         </div>
     </div>
@@ -25,26 +26,38 @@ export default {
     data(){
         return {
             title: "Sub Categories",
-            topCategoryList: []
+            subCategoryList: [],
+            tempCategoryList: []
         }
     },
     methods:{
-        pageTitle : function(categoryList){
+        getSubCategoryList : function(categoryList, currentCategoryCode){
             categoryList.forEach(element => {
-                if(element.ancestors!=""){
-                    element.ancestors.forEach(elementAncestors => {
-                        if(elementAncestors!=""){
-                            this.title = elementAncestors;
+               if(element.ancestorIds!=""){
+                    element.ancestorIds.forEach(elementAncestorId => {
+                        if(elementAncestorId== currentCategoryCode){
+                            this.tempCategoryList.push(element);
+                            console.log(element.ancestors.length)
+                            if(element.ancestors.length>0){
+                                this.title = element.ancestors[0];
+                            }
+                            
                         }
                     });
                 }
             });
+            if(this.tempCategoryList!=null){
+                this.subCategoryList = this.tempCategoryList;
+            }
+            if(this.tempCategoryList.length==0){
+                 this.title = ""
+            }
         }
     },
     mounted(){
         this.$http.get('/static/category/categoryList.json').then(function(res){
-            this.topCategoryList = res.body.content;
-            this.pageTitle(this.topCategoryList);
+            this.subCategoryList = res.body.content;
+            this.getSubCategoryList(this.subCategoryList, this.$route.params.categoryCode);
         })
      }
 }
