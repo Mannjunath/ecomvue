@@ -32,10 +32,8 @@ export default {
 
     },
     mounted(){
-        this.$http.get('/static/category/categoryList.json')
-        .then(function(res){
-            console.log(res.body.content); 
-            this.topCategoryList = res.body.content
+        this.$http.get('/static/category/categoryList.json').then(function(res){
+           this.topCategoryList = res.body.content
         })
         
     }

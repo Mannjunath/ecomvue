@@ -5,11 +5,11 @@
                 <h2>{{title}}</h2>
                 <ul class="list-inline">
                     <li class="post" v-for="category in topCategoryList" :key="category.id" v-if="category.ancestorIds!=''">
-                        <router-link :to="{ name: 'products', params: {categoryCode:category.categoryCode, categoryName: category.nameHighlighted }}" v-if="category.leaf">
+                        <router-link :to="{ name: 'products', params: {categoryCode:category.categoryCode, categoryName: category.name }}" v-if="category.leaf">
                             <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
                             <span>{{category.nameHighlighted}}</span>
                         </router-link>
-                        <router-link :to="{name:'subcategories', params: { categoryCode:category.categoryCode, categoryName:category.nameHighlighted}}" v-else>
+                        <router-link :to="{name:'subcategories', params: { categoryCode:category.categoryCode, categoryName:category.name}}" v-else>
                             <img v-bind:src="category.imagePath" width="180px;" height="180px;" />
                             <span>{{category.nameHighlighted}}</span>
                         </router-link>
@@ -29,17 +29,26 @@ export default {
         }
     },
     methods:{
-
+        pageTitle : function(categoryList){
+            categoryList.forEach(element => {
+                if(element.ancestors!=""){
+                    element.ancestors.forEach(elementAncestors => {
+                        if(elementAncestors!=""){
+                            this.title = elementAncestors;
+                        }
+                    });
+                }
+            });
+        }
     },
     mounted(){
-        this.$http.get('/static/category/categoryList.json')
-        .then(function(res){
-            console.log(res.body.content); 
-            this.topCategoryList = res.body.content
+        this.$http.get('/static/category/categoryList.json').then(function(res){
+            this.topCategoryList = res.body.content;
+            this.pageTitle(this.topCategoryList);
         })
-        
-    }
+     }
 }
+
 </script>
 
 

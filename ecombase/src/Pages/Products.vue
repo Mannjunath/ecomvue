@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>{{title}}</h2>
-                <ul class="list-inline">
+                <ul class="list-inline" v-if="itemList.length>0">
                     <li class="post" v-for="items in itemList" :key="items.customerERPId" >
                         <router-link :to="{ name: 'itemDetail', params: { id: items.id }}">
                         <img :src="items.imageName" height="180px;" />
@@ -11,6 +11,7 @@
                         </router-link>
                     </li>
                 </ul>
+                <div v-else> <b>No Item Found</b> </div>
             </div>
         </div>
     </div>
@@ -21,16 +22,28 @@ export default {
     data(){
         return {
             title: "Products",
-            itemList: []
+            itemList: [],
+            tempItemList: []
         }
     },
     methods:{
-
+        getItemListByCategoryCode: function(categoryList, currentCategoryCode){
+            categoryList.forEach(element => {
+                console.log(element.categoryId+" : "+currentCategoryCode);
+                if(element.categoryId==currentCategoryCode){
+                    this.tempItemList.push(element);
+                    this.title = element.category;
+                }
+            });
+            if(this.tempItemList!=null){
+                this.itemList = this.tempItemList
+            }
+        }
     },
     mounted(){
         this.$http.get('/static/items/itemList.json').then(function(res){
             this.itemList = res.body.content
-            
+            this.getItemListByCategoryCode(this.itemList, this.$route.params.categoryCode)
         })
         
     }
