@@ -24,7 +24,8 @@
                         <li><b>Available: </b><span>{{ items.warehouses[0].quantityAvailable }}</span></li>
                         <li><b>Min. Order Qty: </b><span>{{ items.minimumOrderQuantity }} </span></li>
                         <li><b>Qty. Interval: </b><span>{{ items.orderQuantityInterval }} </span></li>
-                        <li><b>Price: </b><span>{{ items.pricingWarehouse.currency }}{{ items.pricingWarehouse.costPrice }}</span></li>
+                        <li><b>List Price: </b><span>{{ items.pricingWarehouse.currency }}{{ items.pricingWarehouse.listPrice }}</span></li>
+                        <li><b>Your Price: </b><span>{{ items.pricingWarehouse.currency }}{{ items.pricingWarehouse.costPrice }}</span></li>
                     </ul>
                 </div>
                 <div class="col-md-6">
