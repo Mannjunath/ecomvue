@@ -1,24 +1,21 @@
 <template>
-    <swiper :options="swiperOption">
-        <swiper-slide v-for="slider in sliders" v-bind:key="slider.bannerImage.id">
-        <a :href="slider.link" target="_blank"><img :src="slider.bannerImage.imageName" /></a>
-        </swiper-slide>
+<div>
+  <swiper :options="swiperOption" v-if="loadslide">
+        <swiper-slide v-for="slider in sliders" v-bind:key="slider.bannerImage.id"><img :src="slider.bannerImage.imageName" /></swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
     </swiper>
+</div>
+    
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
-  components: {
-    swiper,
-    swiperSlide
-  },
   data () {
+   // alert('data');
     return {
-      swiperOption: {
+     swiperOption: {
           slidesPerView: 1,
           loop: true,
           pagination: {
@@ -33,18 +30,20 @@ export default {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
           }
-        },
-      sliders: [ ]
+      },
+      sliders: [],
+      loadslide:false
     }
+    
   },
-    mounted(){
+   created(){
+    // alert('created');
         this.$http.get('/static/banner/banner.json')
         .then(function(res){
-            console.log(res.body.content.bannerValues); 
-            this.sliders = res.body.content.bannerValues
+           this.sliders = res.body.content.bannerValues;
+           this.loadslide = true;
         })
-        
-    }
+  }
 }
 </script>
 

@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>{{title}}</h2>
-                <ul class="gridView clearfix">
-                    <li v-for="items in itemList" :key="items.customerERPId" >
+                <ul class="gridView clearfix" v-if="itemList.length>0">
+                    <li v-for="items in itemList" :key="items.customerERPId">
                         <div class="sessionImg text-center">
                              <router-link :to="{ name: 'itemDetail', params: { id: items.id }}">
                                 <img :src="items.imageName" height="200px;" />
@@ -47,6 +47,7 @@
                        </div>
                     </li>
                 </ul>
+                <div v-else> <b>No Item Found</b> </div>
             </div>
         </div>
     </div>
@@ -61,12 +62,22 @@ export default {
         }
     },
     methods:{
-
+        getItemListByCategoryCode: function(categoryList, currentCategoryCode){
+            categoryList.forEach(element => {
+                if(element.categoryId==currentCategoryCode){
+                     this.itemList.push(element);
+                    this.title = element.category;
+                }
+            });
+            if(this.itemList.length==0){
+                 this.title = ""
+            }
+        }
     },
     mounted(){
         this.$http.get('/static/items/itemList.json').then(function(res){
-            this.itemList = res.body.content
-            
+            //this.itemList = res.body.content
+            this.getItemListByCategoryCode(res.body.content, this.$route.params.categoryCode)
         })
         
     }

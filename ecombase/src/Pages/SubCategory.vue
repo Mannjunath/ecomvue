@@ -15,7 +15,7 @@
                         </router-link>
                     </li>
                 </ul>
-                <div v-else>No Data Found</div>
+                <div v-else><b>No Data Found</b></div>
             </div>
         </div>
     </div>
@@ -27,7 +27,6 @@ export default {
         return {
             title: "Sub Categories",
             subCategoryList: [],
-            tempCategoryList: []
         }
     },
     methods:{
