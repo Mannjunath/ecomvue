@@ -11,6 +11,13 @@ $main_nav_bgcolor: #333333;
 body{
     font-family: 'Roboto Condensed', serif;
     font-size: 14px;
+    height: 100%;
+}
+html{
+    height: 100%;
+}
+main{
+    height: 100%;
 }
 
 a{
@@ -95,4 +102,19 @@ a{
             }
         }
     }
+}
+.cimm_stickyPageWrap {
+    min-height: 100%;
+    margin: 0 auto -260px auto;
+    width: 100%;
+}
+
+.cimm_stickyPageWrap:after {
+    content: "";
+    display: block;
+}
+
+footer,
+.cimm_stickyPageWrap:after {
+    height: 260px;
 }
