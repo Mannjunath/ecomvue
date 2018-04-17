@@ -1,8 +1,10 @@
 <template>
   <main>
-    <app-header />
-    <mainnav />
-    <router-view/>
+    <div class="cimm_stickyPageWrap">
+     <app-header />
+     <mainnav />
+      <router-view/>
+    </div>
     <app-footer />
   </main>
 </template>
