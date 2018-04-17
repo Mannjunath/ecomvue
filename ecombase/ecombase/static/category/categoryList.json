@@ -19,6 +19,41 @@
         "nameHighlighted": "Adhesives & Sealants"
       }, {
         "ancestorIds": [
+          "126485"
+        ],
+        "ancestors": [
+          "Adhesives & Sealants"
+        ],
+        "ancestorsHighlighted": [
+          "Adhesives & Sealants"
+        ],
+        "bestBet": true,
+        "categoryCode": "126499",
+        "id": "126499",
+        "imagePath": "https://templatestage.cimm2.com/ASSETS/IMAGES/CATEGORIES/LIST_DISPLAY/1316140000GasketSealants.jpg",
+        "leaf": true,
+        "name": "Gasket Sealants",
+        "nameHighlighted": "Gasket Sealants"
+      }, {
+        "ancestorIds": [
+          "126485"
+        ],
+        "ancestors": [
+          "Adhesives & Sealants"
+        ],
+        "ancestorsHighlighted": [
+          "Adhesives & Sealants"
+        ],
+        "bestBet": true,
+        "categoryCode": "126440",
+        "id": "126440",
+        "imagePath": "https://templatestage.cimm2.com/ASSETS/IMAGES/CATEGORIES/LIST_DISPLAY/1316160000PipeThreadSealants.jpg",
+        "leaf": true,
+        "name": "Thread Sealants",
+        "nameHighlighted": "Thread Sealants"
+      },  
+      {
+        "ancestorIds": [
           ""
         ],
         "ancestors": [

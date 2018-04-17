@@ -4,18 +4,44 @@
 $base_font_size: 14px;
 $base_color: #ed1c24;
 $a-color: #333333;
-
+$header_bgcolor: #fff;
+$footer_bgcolor: #333333;
+$main_nav_bgcolor: #333333;
 
 body{
     font-family: 'Roboto Condensed', serif;
     font-size: 14px;
+    height: 100%;
+}
+html{
+    height: 100%;
+}
+main{
+    height: 100%;
 }
 
 a{
     color: $a-color;
     font-size: $base_font_size; 
 }
-
+.quantity{
+    width: 50px;
+    text-align: center;
+}
+.skuDetails{
+    p{
+        margin: 0;
+        line-height: 25px;
+        > b{
+            color: #337ab7;
+        }
+    }
+}
+.itmeTitle{
+    display: block;
+    font-size: 16px;
+    color: #231f20;
+}
 .navbar-default{
     background-color: #231f20;
     border-radius: 0px;
@@ -76,4 +102,19 @@ a{
             }
         }
     }
+}
+.cimm_stickyPageWrap {
+    min-height: 100%;
+    margin: 0 auto -260px auto;
+    width: 100%;
+}
+
+.cimm_stickyPageWrap:after {
+    content: "";
+    display: block;
+}
+
+footer,
+.cimm_stickyPageWrap:after {
+    height: 260px;
 }
