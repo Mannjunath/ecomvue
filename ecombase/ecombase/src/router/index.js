@@ -35,5 +35,6 @@ export default new Router({
       name: 'itemDetail',
       component: itemDetail
     }
-  ]
+  ],
+  mode: 'history'
 });
